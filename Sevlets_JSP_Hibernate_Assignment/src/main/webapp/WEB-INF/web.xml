@@ -1,0 +1,128 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+   <servlet>
+        <servlet-name>ServletRegistration</servlet-name>
+        <servlet-class>formHandling.ServletRegistration</servlet-class>
+    </servlet>
+    
+    
+    <servlet-mapping>
+        <servlet-name>ServletRegistration</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+    <servlet-name>InputServlet</servlet-name>
+    <servlet-class>requestDispatcher.InputServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>InputServlet</servlet-name>
+    <url-pattern>/input</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>GradeServlet</servlet-name>
+    <servlet-class>requestDispatcher.GradeServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>GradeServlet</servlet-name>
+    <url-pattern>/grade</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>ProductServlet</servlet-name>
+    <servlet-class>hiddenForms.ProductServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ProductServlet</servlet-name>
+    <url-pattern>/product</url-pattern>
+</servlet-mapping>
+    
+    <servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>hiddenForms.OrderServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/order</url-pattern>
+</servlet-mapping>
+    
+    
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>session.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>BalanceServlet</servlet-name>
+    <servlet-class>session.BalanceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BalanceServlet</servlet-name>
+    <url-pattern>/balance</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>session.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>CartServlet</servlet-name>
+    <servlet-class>cookies.CartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CartServlet</servlet-name>
+    <url-pattern>/cart</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ViewCartServlet</servlet-name>
+    <servlet-class>cookies.ViewCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewCartServlet</servlet-name>
+    <url-pattern>/viewcart</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>VendorServlet</servlet-name>
+    <servlet-class>jdbc.VendorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VendorServlet</servlet-name>
+    <url-pattern>/vendors</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>BookServlet</servlet-name>
+    <servlet-class>bookStore.BookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookServlet</servlet-name>
+     <url-pattern>/list</url-pattern>
+        <url-pattern>/new</url-pattern>
+        <url-pattern>/insert</url-pattern>
+        <url-pattern>/edit</url-pattern>
+        <url-pattern>/update</url-pattern>
+        <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  
+    
+</web-app>
