@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class Q6 {
 
+    // Method to test
     public static int divide(int a, int b) {
         if (b == 0) {
             throw new IllegalArgumentException("Divider cannot be zero");
@@ -14,9 +15,9 @@ public class Q6 {
 
     @Test
     public void testDivideValidInput() {
-        assertEquals(2, divide(10, 5));     
-        assertEquals(0, divide(0, 10));
-        assertEquals(-5, divide(-10, 2));   
+        assertEquals(2, divide(10, 5));     // 10 / 5 = 2
+        assertEquals(0, divide(0, 10));     // 0 / 10 = 0
+        assertEquals(-5, divide(-10, 2));   // -10 / 2 = -5
     }
 
     @Test
