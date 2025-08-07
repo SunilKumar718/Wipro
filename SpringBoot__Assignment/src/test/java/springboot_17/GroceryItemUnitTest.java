@@ -12,7 +12,7 @@ import static org.mockito.Mockito.*;
 class GroceryItemUnitTest {
 
     @Mock
-//    private GroceryItemRepository repository;
+    private GroceryItemRepository repository;
 
     @InjectMocks
     private GroceryItemService service;
