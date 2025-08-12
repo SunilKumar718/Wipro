@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Conferences Registration Form</title>
+</head>
+<body>
+    <h3 style="text-align:center;">ONLINE CONFERENCES REGISTRATION FORM</h3>
+
+    <form action="submit_form" method="post" enctype="multipart/form-data">
+        <fieldset style="width:60%; margin:auto; padding:20px; border:2px solid #000;">
+            
+             <h3>Personal Information</h3>
+            
+            <label>Full Name: 
+                <input type="text" name="fullname" style="width:50%; margin-left:60px;">
+            </label><br><br>
+
+            <label>Email Address: 
+                <input type="text" name="email" style="width:50%; margin-left:35px;">
+            </label><br>
+            <small>format: user@example.com</small><br><br>
+
+            <label>Gender: 
+                <input type="radio" name="gender" value="Male" style="margin-left:79px;"> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </label><br><br>
+
+            <label>Country: 
+                <select name="country" style="width:42%; margin-left:75px;">
+                    <option>--Select--</option>
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                    <option>Canada</option>
+                    <option>Australia</option>
+                </select>
+            </label><br><br>
+
+            <label>Profile Photo Upload: 
+                <input type="file" name="photo" style="margin-left:5px;">
+            </label><br><br>
+
+            <label>Username: 
+                <input type="text" name="username" style="width:40%; margin-left:60px;">
+            </label><br><br>
+
+            <label>Password: 
+                <input type="password" name="password" style="width:40%; margin-left:63px;">
+            </label><br><br>
+
+            <label>Confirm Password: 
+                <input type="password" name="confirmpassword" style="width:40%; margin-left:5px;">
+            </label><br><br>
+
+            <label>Interests: 
+                <input type="checkbox" name="interest" value="Web Development" style="margin-left:69px;"> Web Development
+                <input type="checkbox" name="interest" value="AI"> AI
+                <input type="checkbox" name="interest" value="Cloud"> Cloud
+            </label><br><br>
+
+            <label>Preferred Contact Method: 
+                <input type="radio" name="contact" value="Email" style="margin-left:5px;"> Email
+                <input type="radio" name="contact" value="Phone"> Phone
+            </label><br><br>
+
+            <label>Special Requirements / Comments:</label>
+            <textarea name="comments" rows="3" style="width:90%;"></textarea><br><br>
+
+            <label>Payment Method: 
+                <select name="payment" style="width:45%; margin-left:10px;">
+                    <option>--Select--</option>
+                    <option>Credit Card</option>
+                    <option>Debit Card</option>
+                    <option>PayPal</option>
+                </select>
+            </label><br><br>
+
+            <label>Card Number: 
+                <input type="text" name="cardnumber" style="width:50%; margin-left:15px;">
+            </label><br><br>
+
+            <label>Expiry Date: 
+                <select name="month" style="margin-left:25px;">
+                    <option>Month</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+                <select name="year">
+                    <option>Year</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                </select>
+            </label><br><br>
+
+            <label>CVV: 
+                <input type="password" name="cvv" size="3" style="margin-left:70px;">
+            </label><br><br>
+
+            <label>Terms & Conditions:
+                <input type="checkbox" name="terms"> I agree to Terms
+            </label><br><br>
+
+            <div style="text-align:center;">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

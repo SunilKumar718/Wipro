@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Flex Image Layout</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+    }
+    .item {
+        
+        border-radius: 6px;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .item img {
+        max-width: 100%;
+        border-radius: 6px;
+        height:180px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Simple Image Gallery</h1>
+</header>
+
+<div class="container">
+    <div class="item">
+        <img src="https://assets.clevelandclinic.org/transform/LargeFeatureImage/cd71f4bd-81d4-45d8-a450-74df78e4477a/Apples-184940975-770x533-1_jpg" 
+        alt="Apple">
+        <p>Fresh Apple</p>
+    </div>
+    <div class="item">
+        <img src="https://theloopywhisk.com/wp-content/uploads/2024/08/Gluten-Free-Sandwich-Bread_1200px-2.jpg" 
+        alt="Bread">
+        <p>Brown Bread</p>
+    </div>
+    <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-dEE3xvtZaj0WoHd0jmiMU7_V8aduyV-ejw&s" 
+        alt="Milk">
+        <p>Organic Milk</p>
+    </div>
+    <div class="item">
+        <img src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/healthiest-cheese-1296x728-swiss.jpg" 
+        alt="Cheese">
+        <p>Cheese</p>
+    </div>
+     <div class="item">
+        <img src="https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2018/08/bananas-1354785_1920.jpg"
+         alt="Cheese">
+        <p>Banana</p>
+    </div>
+     <div class="item">
+        <img src="https://media.istockphoto.com/id/154135449/photo/white-uncooked-rice.jpg?s=612x612&w=0&k=20&c=Uk6T6tKFiEkAB33W7XjDzbVJUolBkY6wNX4vOkjEmXg="
+         alt="Cheese">
+        <p>Rice Bag</p>
+    </div>
+</div>
+
+</body>
+</html>

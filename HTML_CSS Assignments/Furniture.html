@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Furniture Store Catalog</title>
+<style>
+    body {
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    .products {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    .product-card {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        width: 300px;
+        text-align: center;
+        padding: 15px;
+        
+    }
+    .product-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .product-card h3 {
+        margin: 10px 0;
+    }
+    .product-card p {
+        font-size: 14px;
+        color: #555;
+    }
+    .price {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    .buy-btn {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .buy-btn:hover {
+        background-color: #218838;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Furniture Store</h1>
+    <p>Quality Furniture for every home</p>
+</header>
+
+<section class="products">
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71tJcW5vtPL._UF894,1000_QL80_.jpg"
+         alt="Sofa">
+        <h3>Sofa Set</h3>
+        <p>Comfortable 3-seater sofa with premium Fabric.</p>
+        <div class="price">Rs.1499 /-</div>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+
+    <div class="product-card" >
+        <img src="https://m.media-amazon.com/images/I/813qneIYZOL._UF894,1000_QL80_.jpg" alt="Table">
+        <h3>Dining Table</h3>
+        <p>Elegant wooden dining table for family meals.</p>
+        <div class="price">Rs.5299/-</div>
+        <button class="buy-btn" >Buy Now</button>
+    </div>
+
+
+    <div class="product-card" style="background-color: #f0f8ff;">
+        <img src="https://static.vecteezy.com/system/resources/previews/044/903/916/non_2x/furniture-armchair-isolated-png.png" alt="Chair">
+        <h3>Armchair</h3>
+        <p>Stylish and comfortable armchair for your living room.</p>
+        <div class="price">Rs.2299/-</div>
+        <button class="buy-btn" style="background-color:red;color:black">Buy Now</button>
+    </div>
+</section>
+
+</body>
+</html>
