@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tour Booking Form</title>
+</head>
+<body>
+
+<h2>Tour Booking Form</h2>
+<form>
+    Full Name: <input type="text" id="fullName"><br><br>
+    Email: <input type="email" id="email"><br><br>
+    Destination: 
+    <select id="destination">
+        <option value="Ooty">Ooty</option>
+        <option value="Goa">Goa</option>
+        <option value="Manali">Manali</option>
+    </select><br><br>
+    Number of Days: <input type="number" id="days"><br><br>
+    Number of Travellers: <input type="number" id="travellers"><br><br>
+    <button type="button" onclick="book()">Book Now</button>
+</form>
+
+<h3>Booking Summary</h3>
+<div id="summary"></div>
+
+<script>
+function book() {
+    let name = document.getElementById("fullName").value;
+    let email = document.getElementById("email").value;
+    let destination =document.getElementById("destination").value;
+    let days =parseInt(document.getElementById("days").value);
+    let travellers =parseInt(document.getElementById("travellers").value);
+
+    let pricePerDay = 0;
+    if (destination === "Ooty") {
+        pricePerDay = 1000;
+    } else if (destination === "Goa") {
+        pricePerDay = 10000;
+    } else if (destination === "Manali") {
+        pricePerDay = 7000;
+    }
+
+    let totalCost = pricePerDay * days * travellers;
+
+    document.getElementById("summary").innerHTML = 
+        ` <b>Name:</b> ${name} <br>
+        <b>Email:</b> ${email} <br>
+        <b>Destination:</b> ${destination} <br>
+        <b>Days:</b> ${days} <br>
+        <b>Travelers:</b> ${travellers} <br>
+        <b>Total Cost:</b> ₹${totalCost.toLocaleString("en-IN")}
+    `;
+}
+</script>
+
+</body>
+</html>

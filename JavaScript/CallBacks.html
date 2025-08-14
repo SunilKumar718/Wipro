@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Income Tax Calculator</title>
+</head>
+<body>
+    <h2>Income Tax Calculator</h2>
+
+    <form id="formTax">
+        Name: <input type="text" id="name" required><br><br>
+        PAN: <input type="text" id="pan" required><br><br>
+        Income: <input type="number" id="income" required><br><br>
+        <button type="submit">Get Tax</button>
+    </form>
+
+    <h3>Result:</h3>
+    <p id="showResult"></p>
+
+    <script>
+        let allRecords = [];
+        function findTax(name, pan, income,tax) {
+
+            let taxAmount=0;
+            if (income <= 250000) {
+                taxAmount = 0;
+            } else if (income <= 500000) {
+                taxAmount = (income - 250000) * 0.05;
+            } else if (income <= 1000000) {
+                taxAmount =(250000 * 0.05) + (income - 500000) * 0.2;
+            } else {
+                taxAmount =(250000 * 0.05) +(500000 * 0.2) +(income -1000000) * 0.3;
+            }
+
+            tax({ name, pan, income, taxAmount });
+        }
+
+        function logToConsole(info) {
+            console.log("Tax Info:", info);
+        }
+        function displayOnPage(info) {
+            document.getElementById("showResult").innerHTML =
+                `Name: ${info.name} <br>
+                 PAN: ${info.pan} <br>
+                 Income: ₹${info.income} <br>
+                 Tax: ₹${info.taxAmount}`;
+        }
+        function saveToRecord(info) {
+            allRecords.push(info);
+            console.log("All Records:", allRecords);
+        }
+        document.getElementById("formTax").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            let nameVal = document.getElementById("name").value;
+            let panVal = document.getElementById("pan").value;
+            let incomeVal = parseFloat(document.getElementById("income").value);
+
+            findTax(nameVal, panVal, incomeVal, function(details){
+                logToConsole(details);
+                displayOnPage(details);
+                saveToRecord(details);
+            });
+        });
+    </script>
+</body>
+</html>

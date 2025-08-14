@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equality and Inequality Comparison</title>
+</head>
+<body>
+
+<script>
+let value1 =prompt("Enter first value:");
+let value2 =parseInt(prompt("Enter second value:"));
+
+document.write("<h3>Original Values</h3>");
+document.write("Value 1: " + value1 + " (Type: " +typeof value1 + ")<br>");
+document.write("Value 2: " + value2 + " (Type: " +typeof value2 + ")<br><br>");
+
+document.write("<b>Using == :</b> " + (value1 == value2) + 
+              " → Equality ignores type.<br>");
+
+document.write("<b>Using === :</b> " + (value1 === value2) + 
+              " → Strict equality checks type too.<br>");
+
+document.write("<b>Using != :</b> " + (value1 !=value2) + 
+              " → Values considered equal.<br>");
+
+document.write("<b>Using !== :</b> " + (value1 !== value2) + 
+              " → Strict inequality because types differ.<br><br>");
+
+let num1 = value1;
+let num2 = value2;
+
+document.write("<h3>After Number Conversion</h3>");
+document.write("Value 1: " +num1 + " (Type: " +typeof num1+ ")<br>");
+document.write("Value 2: " +num2 + " (Type: " +typeof num2+ ")<br><br>");
+
+document.write("<b>== :</b> "+ (num1 == num2) + "<br>");
+document.write("<b>=== :</b> "+ (num1 === num2) + "<br>");
+document.write("<b>!= :</b> " + (num1 != num2) + "<br>");
+document.write("<b>!== :</b> " + (num1 !== num2) + "<br>");
+</script>
+
+</body>
+</html>

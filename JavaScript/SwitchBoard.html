@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const buildingName ="My_Building";
+let status = "OFF";
+
+var i;
+const devices =["Light", "Fan", "AC"];
+
+for (i = 0; i < devices.length; i++) {
+    status = (status === "OFF") ? "ON" : "OFF";
+    console.log(`Checking Switch ${i + 1}: ${devices[i]} is ${status}`);
+}
+console.log("Outside Loop: var counter is:", i);
+
+try {
+    buildingName= "Moonlight_Building";
+} catch (error){
+    console.error("Error when trying to change const:", error.message);
+}
+    </script>
+   
+</body>
+</html>

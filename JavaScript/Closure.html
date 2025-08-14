@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Share Market Portfolio </title>
+
+</head>
+<body>
+    <h2>Share Market Portfolio Tracker</h2>
+    <div id="output"></div>
+
+    <script>
+        function createPortfolio(){
+            let portfolio = [];
+
+            function log(message) {
+                document.getElementById("output").innerHTML += message + "<br>";
+            }
+            function buyShare(company, quantity, pricePerShare) {
+                let existing = portfolio.find(s => s.company === company);
+                if (existing){
+                    existing.quantity +=quantity;
+                    existing.pricePerShare = pricePerShare;
+                } else {
+                    portfolio.push({ company, quantity, pricePerShare });
+                }
+                log(`Bought ${quantity} shares of ${company} at ₹ ${pricePerShare} each. `);
+            }
+            function sellShare(company, quantity) {
+                let existing = portfolio.find(s => s.company === company);
+                if (existing) {
+                    if (quantity >= existing.quantity) {
+                        portfolio = portfolio.filter(s => s.company !== company);
+                        log(`Sold all shares of ${company}.`);
+                    } else {
+                        existing.quantity -= quantity;
+                        log(`Sold ${quantity} shares of ${company}.`);
+                    }
+                } else {
+                    log(`No shares found for ${company}.`);
+                }
+            }
+            function totalValue() {
+                return portfolio.reduce((total, share) =>
+                    total + (share.quantity * share.pricePerShare), 0);
+            }
+            function showTotal() {
+                log(`Portfolio Value: ${totalValue()}`);
+            }
+            return {
+                buyShare,
+                sellShare,
+                showTotal
+            };
+        }
+        const portfolio = createPortfolio();
+        portfolio.buyShare('TCS', 10, 3500);
+        portfolio.buyShare('Infosys', 5, 1500);
+        portfolio.sellShare('TCS', 3);
+        portfolio.showTotal();
+    </script>
+</body>
+</html>

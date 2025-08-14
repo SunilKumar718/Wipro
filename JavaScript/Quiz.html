@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Game</title>
+</head>
+<body>
+
+<script>
+alert("Welcome to the Quiz Game!");
+
+let userName = prompt("What is your name?");
+
+let con = confirm("Hi "+userName +"! Are you ready for the quiz?");
+
+if (con) {
+    let ans =prompt(
+        "What is the PM of India?\n" +
+        "a) Modi\n" +
+        "b) Rahul\n" +
+        "c) Putin"
+    );
+
+    if (ans.toLowerCase() === "a" || ans.toLowerCase() === "Modi") {
+        alert("Correct Answer! Well done, " +userName + "!");
+    } else {
+        alert("Oops! That's wrong. The correct answer is Modi.");
+    }
+} else {
+    alert("Okay, Try Some other time!");
+}
+</script>
+
+</body>
+</html>

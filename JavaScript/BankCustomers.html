@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Customers</title>
+</head>
+<body>
+
+<script>
+let count = parseInt(prompt("How many customers to register?"));
+
+let customers = [];
+for (let i = 0; i < count; i++){
+    let name = prompt(`Enter name of customer ${i + 1}:`);
+    customers.push(name);
+}
+
+document.write("<h3>Customer Names:</h3>");
+for (let name of customers) {
+    document.write(name + "<br>");
+}
+document.write("<h3>Customer IDs (Indexes):</h3>");
+for (let index in customers) {
+    document.write(index + "<br>");
+}
+let newCustomer = prompt("Enter new customer name to add at end:");
+customers.push(newCustomer);
+document.write("<h3>After Adding New Customer at End:</h3>" + customers.join(", ") + "<br>");
+
+let removedCustomer = customers.pop();
+document.write(`Removed Customer: ${removedCustomer}<br>`);
+document.write("<h3>After Removing Last Customer:</h3>" + customers.join(", ") + "<br>");
+
+let insertPos = parseInt(prompt("Enter position to insert new customer:"));
+let insertName =prompt("Enter new customer name to insert:");
+customers.splice(insertPos, 0, insertName);
+document.write("<h3>After Inserting at Position " + insertPos + ":</h3>" + customers.join(", ") + "<br>");
+
+let deletePos =parseInt(prompt("Enter position to delete customer:"));
+let deletedName =customers.splice(deletePos, 1);
+document.write(`Deleted Customer: ${deletedName}<br>`);
+document.write("<h3>After Deletion:</h3>" + customers.join(", ") + "<br>");
+
+document.write("<h3>Final Customer List:</h3>");
+for (let name of customers) {
+    document.write(name + "<br>");
+}
+
+</script>
+
+</body>
+</html>

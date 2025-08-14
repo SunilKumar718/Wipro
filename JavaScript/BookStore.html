@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book JSON Management</title>
+</head>
+<body>
+
+<script>
+let books = [
+    { title: "JavaScript Basics",author: "Anu",price: 450, available: true },
+    { title: "HTML & CSS", author: "Devi", price: 350, available: false },
+    { title: "Solitude", author: "Mahi", price: 250, available: true }
+];
+document.write("<h3>All Books:</h3>");
+for (let book of books) {
+    document.write(`Title: ${book.title}, Author: ${book.author}, Price: ${book.price} ₹, Available: ${book.available}<br>`);
+}
+
+document.write("<h3>Available Books:</h3>");
+for (let book of books) {
+    if (book.available) {
+        document.write(`Title: ${book.title}, Author: ${book.author}, Price: ${book.price} ₹<br>`);
+    }
+}
+
+books.push({ title: "Node.js Guide", author: "Ravi", price: 550, available: true });
+document.write("<h3>After Adding:</h3>");
+document.write(books.map(b => b.title).join(", ") + "<br>");
+
+let bookToUpdate ="JavaScript Basics";
+for (let book of books) {
+    if (book.title ===bookToUpdate) {
+        book.price = 500; 
+    }
+}
+document.write("<h3>After Price Update:</h3>");
+for (let book of books){
+    if (book.title ===bookToUpdate) {
+        document.write(`${book.title} - ${book.price} ₹<br>`);
+    }
+}
+let bookToDelete ="JavaScript Basics";
+books = books.filter(book => book.title!== bookToDelete);
+document.write("<h3>After Deletion:</h3>");
+document.write(books.map(b => b.title).join(", ") + "<br>");
+
+</script>
+
+</body>
+</html>

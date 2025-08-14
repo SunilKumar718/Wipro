@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Player Info</title>
+</head>
+<body>
+<script>
+    const player1 = {
+        name:"Virat Kohli",
+        age:36,
+        sport:"Cricket",
+        stats:{
+            matches:500,
+            runs:25000,
+            average:57.2
+        }
+    };
+    const player2 ={
+        name:"Lionel Messi",
+        age:38,
+        sport:"Football",
+        stats:{
+            matches: 800,
+            goals: 720,
+            assists: 300
+        }
+    };
+
+    const players = [player1, player2];
+
+    const [p1, p2] = players;
+
+    const { 
+        name: name1,sport: sport1,
+        stats: { matches: matches1, runs, average } } = p1;
+    document.write(`Player ${name1} plays ${sport1}.<br>`);
+    document.write(`Matches: ${matches1} | Runs: ${runs} | Batting Average: ${average}<br><br>`);
+
+    const { 
+        name: name2, sport: sport2,
+         stats: { matches: matches2, goals, assists } } = p2;
+    document.write(`Player ${name2} plays ${sport2}.<br>`);
+    document.write(`Matches: ${matches2} | Goals: ${goals} | Assists: ${assists}<br>`);
+</script>
+
+</body>
+</html>
+
